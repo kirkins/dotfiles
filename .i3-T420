@@ -159,6 +159,9 @@ bar {
 #picture at start
 exec /opt/bin/fehbg
 
+#print screen button
+bindsym Print exec gnome-screenshot
+
 #Mod3 commands
 bindsym Mod3+f exec "firefox" 
 
