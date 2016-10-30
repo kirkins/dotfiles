@@ -174,6 +174,9 @@ exec /opt/bin/fehbg
 bindsym Print exec gnome-screenshot
 
 #Mod3 commands
-bindsym Mod3+w exec /opt/bin/openBrowser 
+bindsym Mod3+w exec "/opt/bin/openBrowser &>/home/philip/temp.log"
 bindsym Mod3+Control+r exec "reboot -n"
-bindsym Mod3+Control+a exec "speak"
+bindsym Mod3+Control+a exec "/opt/bin/speak &>/home/philip/temp.log"
+
+#Tab through workspaces
+bindsym $mod+Tab workspace next
