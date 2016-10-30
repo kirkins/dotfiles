@@ -1,0 +1,5 @@
+#!/bin/bash
+ 
+xclip -o | xclip -selection clipboard -i
+xclip -0 | espeak
+
