@@ -170,3 +170,14 @@ bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+
+#Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+#lockscreen button
+bindsym $mod+Control+l exec lock -pg
+exec xautolock -time 10 -locker 'i3lock /usr/local/bin/lock -p' &
+
+#Tab through workspaces
+bindsym $mod+Tab workspace next
