@@ -2,7 +2,7 @@
 
 echo ""
 host='kirkins@graniteapps.co'
-directory='/home/kirkins/backup'
+directory='/home/$USER/backup'
 rsync -au /home/philip/backup $host:$directory
 retvalue=$?
 
