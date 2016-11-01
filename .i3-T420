@@ -157,7 +157,7 @@ bar {
 }
 
 #picture at start
-exec /opt/bin/fehbg
+#exec /opt/bin/fehbg
 
 #print screen button
 bindsym Print exec gnome-screenshot
