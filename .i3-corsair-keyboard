@@ -164,9 +164,10 @@ bindsym Print exec gnome-screenshot
 
 #Mod3 commands
 bindsym Mod3+w exec "firefox"
-bindsym Mod3+m exec "spotify"
-bindsym Mod3+s exec_always /opt/bin/speak
-bindsym Mod3+Control+r exec "reboot -n"
+bindsym Mod3+m exec "spotify" 
+bindsym Mod3+s exec "xfce4-terminal -e /opt/bin/speak"
+bindsym Mod3+f exec "xfce4-terminal -e ranger" 
+bindsym Mod3+Control+r exec "reboot -n" 
 
 #Menu key
 bindsym Menu exec "xdotool click 3"
