@@ -5,4 +5,4 @@ Bash script with puppet to configure my dev environment
 
     git clone http://github.com/kirkins/dotfiles
     cd dotfiles
-    ./install
+    ./install.sh
