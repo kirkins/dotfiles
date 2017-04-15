@@ -2,10 +2,10 @@ node default {
 
   include tmux    # background bash windows
   include vim     # text editor
+  include i3      # window manager
 
   # packages to install
   $packages = [ 
-    'i3-wm',      # window manager
     'jq',         # formatting json
     'gimp',       # image editing
     'git',        # version control
@@ -38,15 +38,6 @@ node default {
     path => '/etc/bash.bashrc',  
     line => 'HISTCONTROL=ignoreboth',
     match => 'HISTCONTROL=.*$',
-  }
-
-  # customize i3-wm
-  file { '/etc/i3/config':
-    ensure => present,
-  }->
-  file_line { 'use mod+tab to cycle workspaces':
-    path => '/etc/i3/config',
-    line => 'bindsym $mod+Tab workspace next',
   }
 
 }
