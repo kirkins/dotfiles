@@ -10,4 +10,14 @@ class vim {
     group => 'root',
     mode => '0644',
   }
+
+  file { '/etc/vim/bundle/Vundle.vim':
+    ensure => 'directory',
+    source => 'puppet:///modules/vim/Vundle.vim',
+    recurse => 'remote',
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+  }
+
 }
