@@ -50,4 +50,13 @@ node default {
     line => 'bindsym $mod+Tab workspace next',
   }
 
+  # customize vimrc
+  file { '/etc/vim/vimrc':
+    ensure => present,
+  }->
+  file_line { 'colorscheme on vim':
+    path => '/etc/vim/vimrc',
+    line => 'colorscheme pablo',
+  }
+
 }
