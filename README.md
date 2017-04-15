@@ -5,24 +5,24 @@ Bash script with puppet to configure my development environment
 
 ### Programs with custom dotfiles:
 
-*  tmux      # background bash windows
-*  vim       # text editor
-*  i3        # window manager
+*  tmux      _background bash windows_
+*  vim       _text editor_
+*  i3        _window manager_
 
 ### Additional programs:
 
-* jq         # formatting json
-* gimp       # image editing
-* git        # version control
-* nmap       # port scanning
-* virtualenv # manage python dependencies
-* python-pip # python pakcage management
+* jq         _formatting json_
+* gimp       _image editing_
+* git        _version control_
+* nmap       _port scanning_
+* virtualenv _manage python dependencies_
+* python-pip _python pakcage management_
 
 ### Programs from github:
-* vundle     # handle vim plugins
+* vundle     _handle vim plugins_
 
 ### Vim plugins
-* rodjek/vim-puppet # syntax highlighting for puppet files
+* rodjek/vim-puppet _syntax highlighting for puppet files_
 
 ## usage
 
