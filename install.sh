@@ -18,6 +18,7 @@ fi
 
 # install puppet
 sudo gem install puppet
+# install stdlib from puppetlabs
 sudo puppet module install puppetlabs/stdlib
 # move puppet files
 cp -rf .puppet ~/
