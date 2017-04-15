@@ -3,6 +3,7 @@ node default {
   include tmux    # background bash windows
   include vim     # text editor
   include i3      # window manager
+  include nvm     # node version manager 
 
   # packages to install
   $packages = [ 
@@ -12,6 +13,7 @@ node default {
     'nmap',       # port scanning
     'virtualenv', # manage python dependencies
     'python-pip', # python pakcage management
+    'curl',       # for api requests
   ]
 
   package { $packages: ensure => installed }
