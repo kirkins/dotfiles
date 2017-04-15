@@ -50,12 +50,4 @@ node default {
     line => 'bindsym $mod+Tab workspace next',
   }
 
-  # customize tmux 
-  # file { '/etc/tmux.conf':
-  #   source => 'puppet:///modules/tmux/tmux.conf',
-  #   owner => 'root',
-  #   group => 'root',
-  #   mode => '0644',
-  # }
-
 }
