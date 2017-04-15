@@ -57,6 +57,7 @@ node default {
   file_line { 'colorscheme on vim':
     path => '/etc/vim/vimrc',
     line => 'colorscheme pablo',
+    match => 'colorscheme.*$',
   }
 
 }
