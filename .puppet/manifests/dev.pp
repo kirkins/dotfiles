@@ -1,6 +1,7 @@
 node default {
 
-  include tmux
+  include tmux    # background bash windows
+  include vim     # text editor
 
   # packages to install
   $packages = [ 
@@ -8,9 +9,7 @@ node default {
     'jq',         # formatting json
     'gimp',       # image editing
     'git',        # version control
-    'vim',        # text editor
     'nmap',       # port scanning
-    'tmux',       # backgrounding bash windows
     'virtualenv', # manage python dependencies
     'python-pip', # python pakcage management
   ]
@@ -48,16 +47,6 @@ node default {
   file_line { 'use mod+tab to cycle workspaces':
     path => '/etc/i3/config',
     line => 'bindsym $mod+Tab workspace next',
-  }
-
-  # customize vimrc
-  file { '/etc/vim/vimrc':
-    ensure => present,
-  }->
-  file_line { 'colorscheme on vim':
-    path => '/etc/vim/vimrc',
-    line => 'colorscheme pablo',
-    match => 'colorscheme.*$',
   }
 
 }
