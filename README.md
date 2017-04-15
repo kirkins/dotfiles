@@ -1,5 +1,5 @@
 # dotfiles
-Bash script with puppet to configure my dev environment
+Bash script with puppet to configure my development environment
 
 ## usage
 
