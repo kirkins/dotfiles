@@ -19,3 +19,8 @@ cut -d \' -f2 |
 xargs man -f | grep \(1\) | sed 's/(1)//g' |
 # log output for debugging
 xargs -i echo '* {}' > sorted_programs.log
+
+# get all to do references
+grep -r "TODO" . |
+# remove all vundle tasks
+sed '/vundle/I,+1 d'
