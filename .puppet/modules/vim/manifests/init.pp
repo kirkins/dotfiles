@@ -23,7 +23,7 @@ class vim {
   exec { 'load vim plugins':
     command     => 'vim +PluginInstall +qall',
     path        => '/usr/bin/:/bin/bash/',
-    environment => "HOME=/root"
+    environment => 'HOME=/root',
   }
 
 }

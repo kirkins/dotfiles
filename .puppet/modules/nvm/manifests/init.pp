@@ -30,5 +30,6 @@ class nvm {
   }
 
   #TODO source bashrc file otherwise nvm is not recognized untill closing and reopening bash
+  #     also an issue trying to use execute nvm install node from puppet as nvm is not defined
 
 }
