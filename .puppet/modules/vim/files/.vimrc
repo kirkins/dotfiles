@@ -15,3 +15,4 @@ filetype plugin indent on    " required
 
 syntax on
 colorscheme slate
+set backspace=start
