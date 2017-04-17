@@ -8,17 +8,17 @@ node default {
 
   # packages to install
   $packages = [ 
-    'jq',         # formatting json
+    'curl',       # for api requests
     'gimp',       # image editing
     'git',        # version control
-    'nmap',       # port scanning
-    'virtualenv', # manage python dependencies
-    'python-pip', # python pakcage management
-    'curl',       # for api requests
-    'ranger',     # for file system navigation
-    'traceroute', # trace traffic route
     'iftop',      # monitor network usage by ip
     'iotop',      # monitor io usage
+    'jq',         # formatting json
+    'nmap',       # port scanning
+    'python-pip', # python pakcage management
+    'ranger',     # for file system navigation
+    'traceroute', # trace traffic route
+    'virtualenv', # manage python dependencies
   ]
 
   package { $packages: ensure => installed }

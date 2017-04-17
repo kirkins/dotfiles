@@ -18,4 +18,4 @@ cut -d \' -f2 |
 # get program description for each
 xargs man -f | grep \(1\) | sed 's/(1)//g' |
 # log output for debugging
-xargs -i echo '{}'\n >> sorted_programs.log
+xargs -i echo '* {}' > sorted_programs.log
