@@ -29,4 +29,6 @@ class nvm {
     line => '[ -s "/opt/nvm/bin/nvm.sh" ] && . "/opt/nvm/bin/nvm.sh"',
   }
 
+  #TODO source bashrc file otherwise nvm is not recognized untill closing and reopening bash
+
 }

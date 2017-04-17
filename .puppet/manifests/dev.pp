@@ -1,5 +1,6 @@
 node default {
 
+  include nvm     # node version manager
   include tmux    # background bash windows
   include vim     # text editor
   include i3      # window manager
@@ -14,6 +15,10 @@ node default {
     'virtualenv', # manage python dependencies
     'python-pip', # python pakcage management
     'curl',       # for api requests
+    'ranger',     # for file system navigation
+    'traceroute', # trace traffic route
+    'iftop',      # monitor network usage by ip
+    'iotop',      # monitor io usage
   ]
 
   package { $packages: ensure => installed }
