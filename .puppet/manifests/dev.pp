@@ -23,6 +23,8 @@ node default {
 
   package { $packages: ensure => installed }
 
+  # TODO put all changes into a single file and append it (?)
+  # ^ issue, would lose useful distro defaults
   # changes to .bashrc
   file { '/etc/bash.bashrc':
     ensure => present,
@@ -45,6 +47,11 @@ node default {
     path => '/etc/bash.bashrc',  
     line => 'HISTCONTROL=ignoreboth',
     match => 'HISTCONTROL=.*$',
+  }->
+  file_line { 'cx alias to chmod+x':
+    path => '/etc/bash.bashrc',
+    line => 'alias cx="chmod a+x $1"',
+    match => 'alias cx=.*$',
   }
 
 }
