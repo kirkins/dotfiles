@@ -1,11 +1,7 @@
-#
-# Script that checks which programs are being installed and generates
-# a list of program descriptions from man pages
-#
-# By: Philip Kirkbride <kirkins@gmail.com>
-#
-# TODO no description for python-pip
-# TODO dump output into README
+#!/bin/bash
+
+# Checks which programs are being installed and generates a list of program descriptions from man pages
+# Philip Kirkbride <kirkins@gmail.com>
 
 # get list of packages to be installed
 sed -e '/\$packages/,/]/!d; /]/q' .puppet/manifests/init.pp |
@@ -22,5 +18,11 @@ xargs -i echo '* {}' > sorted_programs.log
 
 # get all to do references
 grep -r "TODO" . |
-# remove all vundle tasks
-sed '/vundle/I,+1 d'
+# remove all vundle tasks, references in .git, and the above query
+sed '/vundle/I,+1 d' | sed '/.git/,+1 d' | sed '/grep -r \"TODO\"/,+1 d' |
+# output all 
+xargs -i echo '* {}' > task_list.log
+
+# TODO instead of manually looking for vundle should iterate through .gitmodules file and remove said results.
+# TODO no description for python-pip
+# TODO dump output into README
