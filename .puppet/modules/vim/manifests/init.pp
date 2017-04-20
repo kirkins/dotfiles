@@ -4,6 +4,20 @@ class vim {
     ensure      => installed,
   }
 
+  file { '/etc/vim':
+    ensure      => 'directory',
+    owner       => 'root',
+    group       => 'root',
+    mode        => '0644',
+  }
+
+  file { '/etc/vim/bundle':
+    ensure      => 'directory',
+    owner       => 'root',
+    group       => 'root',
+    mode        => '0644',
+  }
+
   file { '/etc/vim/vimrc':
     source      => 'puppet:///modules/vim/.vimrc',
     owner       => 'root',
