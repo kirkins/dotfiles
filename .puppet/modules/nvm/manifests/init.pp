@@ -1,4 +1,12 @@
 class nvm {
+
+  file { '/opt/nvm':
+    ensure => 'directory',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0755',
+  }
+
   file { '/opt/nvm/bin':
     ensure      => 'directory',
     owner       => 'root',

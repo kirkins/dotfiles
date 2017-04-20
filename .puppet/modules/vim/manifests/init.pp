@@ -4,8 +4,15 @@ class vim {
     ensure      => installed,
   }
 
-  file { '/etc/vim/vimrc':
-    source      => 'puppet:///modules/vim/.vimrc',
+  file { '/etc/vim':
+    ensure      => 'directory',
+    owner       => 'root',
+    group       => 'root',
+    mode        => '0644',
+  }
+
+  file { '/etc/vim/bundle':
+    ensure      => 'directory',
     owner       => 'root',
     group       => 'root',
     mode        => '0644',
@@ -18,6 +25,15 @@ class vim {
     owner       => 'root',
     group       => 'root',
     mode        => '0644',
+  }
+
+  # iterate through homedirs in fact array
+  $facts['homedirs'].each |$homedir| {
+    # copy file to home directory
+    file { "/home/$homedir/.vimrc":
+      ensure => 'file',
+      source => 'puppet:///modules/vim/.vimrc',
+    }
   }
 
   exec { 'load vim plugins':
