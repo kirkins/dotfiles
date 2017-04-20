@@ -27,6 +27,8 @@ class nvm {
     require =>  Package['git'],
   }
 
+  # TODO may want to put the following into user specific bashrc not global
+
   # changes to .bashrc
   file_line { 'export nvm':
     path => '/etc/bash.bashrc',  
