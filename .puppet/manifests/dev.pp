@@ -49,7 +49,7 @@ node default {
   }->
   file_line { 'cx alias to chmod+x':
     path => '/etc/bash.bashrc',
-    line => 'alias cx="chmod a+x"',
+    line => 'alias cx="chmod a+x $1"',
     match => 'alias cx=.*$',
   }
 
