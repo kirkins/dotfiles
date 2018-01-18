@@ -92,6 +92,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias vi='vim'
+alias e='emacsclient -nw'
 alias cx="chmod a+x $1"
 
 # Add an "alert" alias for long running commands.  Use like so:
