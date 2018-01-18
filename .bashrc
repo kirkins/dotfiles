@@ -122,3 +122,14 @@ export PS1='> '
 
 PATH=$PATH:/opt/bin
 export PATH
+
+
+
+tryssh()
+{
+until ssh $1; do
+    sleep 5
+done
+}
+
+
