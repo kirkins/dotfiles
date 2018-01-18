@@ -132,4 +132,12 @@ until ssh $1; do
 done
 }
 
+volume() {
+  if [ $# -eq 0 ]
+  then
+    awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master)
+  else
+    amixer -D pulse sset Master $1%
+  fi
+}
 
